@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/beans"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	
+http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<!-- <bean class="com.springcore.Student" name="student1"> setter injection 
+		<property name="studentId"> <value>124565</value> </property> same as <property 
+		name="studentId" value="1234" /> <property name="studentName"> <value>sonia 
+		sanjana</value> </property> <property name="studentName" value="Manish sahu" 
+		/> <property name="studentAddress"> <value>sab234 Sec-15</value> </property> 
+		<property name="studentAddress" value="Noida Sec-14" /> </bean> -->
+
+
+	<!-- 2nd bean -->
+
+	<!-- <bean class="com.springcore.Student" name="student2"> <property name="studentId" 
+		value="3456" /> <property name="studentName" value="saurabh singh" /> <property 
+		name="studentAddress" value="sahajanpur sec34"/> <property name="studentAddress"> 
+		<value>"sahanduh"</value> </property> </bean> -->
+
+
+	<!-- 2nd way -->
+
+	<bean class="com.springcore.Student" name="student12"
+		p:studentId="1267" p:studentName="sonia kumari"
+		p:studentAddress="gurgaon" />
+</beans>
