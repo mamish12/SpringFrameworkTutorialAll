@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/beans"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	
+http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<!-- constructor injection -->
+
+	<!-- <bean class="com.springcore.constructorArg.Certi" name="cert"> <constructor-arg 
+		value="Java Full Stack"/> </bean> -->
+
+	<bean class="com.springcore.constructorArg.Certi" name="cert"
+		c:name="java with advance" />
+
+	<bean class="com.springcore.constructorArg.Person" name="conArg">
+		<constructor-arg value="manish kumar" />
+		<constructor-arg value="1245" />
+		<constructor-arg ref="cert" />
+		<constructor-arg>
+			<list>
+				<value>item1</value>
+				<value>item2</value>
+			</list>
+		</constructor-arg>
+	</bean>
+
+
+	<!-- <bean class="com.springcore.constructorArg.Person" name="conArg" c:name="manish 
+		ranjan" c:personId="5678" c:certi-ref="cert"/> -->
+
+
+	<bean class="com.springcore.constructorArg.Addition" name="add">
+		<constructor-arg value="12" type="int" index="1"/>
+		<constructor-arg value="34" type="int" index="0"/>
+	</bean>
+</beans>
